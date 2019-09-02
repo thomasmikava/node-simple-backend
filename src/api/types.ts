@@ -2,7 +2,6 @@ const TYPES = {
 	MODELS: {
 		Subjects: Symbol("Subjects"),
 	},
-	SERVICES: {
-	},
+	SERVICES: {},
 };
 export default TYPES;

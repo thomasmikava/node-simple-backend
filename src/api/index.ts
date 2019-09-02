@@ -13,18 +13,9 @@ import SatestoModules from "./satesto";
 require("dotenv").config();
 
 export default function(port: number | string) {
-	container.load(
-		ModelsModules,
-		ServicesModules,
-		SatestoModules,
-	);
+	container.load(ModelsModules, ServicesModules, SatestoModules);
 
 	const server = new InversifyExpressServer(container);
-
-
-
-
-	
 
 	server.setConfig(app => {
 		app.use(

@@ -134,7 +134,6 @@ export function withSpecials(
 ) {
 	const method = descriptor.value;
 	descriptor.value = function() {
-
 		const paramObjectIdParameters: number[] = Reflect.getOwnMetadata(
 			metadataKeys.objectId,
 			target,
