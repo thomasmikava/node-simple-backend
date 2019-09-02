@@ -1,0 +1,108 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\ImageMagick-7.0.8-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files (x86)\IncrediBuild;C:\Program Files\Calibre2\;C:\Program Files (x86)\Yarn\bin\;C:\xampp\php;C:\Users\koddd\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\koddd\AppData\Local\Programs\Python\Python36\;C:\Users\koddd\AppData\Local\Microsoft\WindowsApps;;C:\Users\koddd\AppData\Roaming\npm;C:\Users\koddd\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\koddd\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.15.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\nodejsapps\node-simple-backend\package.json: Unexpected token } in JSON at position 1516
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/src/index.js",
+    "scripts": {
+      "test": "jest --forceExit",
+      "testWithCoverage": "jest --coverage",
+      "start": "nodemon --ignore dist/sessions/ --ignore sessions/ --ignore dist/temp_uploads --ignore dist/photos --ignore src dist/src/index.js",
+      "lint-fix": "tslint --fix src/**/*.ts -t verbose",
+      "vers": "yarn info joi --v"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@hapi/joi": "^15.0.3",
+      "@types/inversify-inject-decorators": "^2.0.0",
+      "@types/jest": "^24.0.13",
+      "body-parser": "^1.18.3",
+      "cluster": "^0.7.7",
+      "cors": "^2.8.5",
+      "dotenv": "^6.1.0",
+      "express": "^4.16.4",
+      "fs": "^0.0.1-security",
+      "inversify-express-utils": "^6.3.2",
+      "inversify-inject-decorators": "^3.1.0",
+      "ip": "^1.1.5",
+      "jest": "^24.8.0",
+      "js-sha512": "^0.8.0",
+      "jsonwebtoken": "^8.4.0",
+      "mongoose": "^5.3.3",
+      "mysql": "^2.16.0",
+      "mysql2": "^1.6.1",
+      "nested-error-stacks": "^2.1.0",
+      "nodemon": "^1.18.4",
+      "os": "^0.1.1",
+      "path": "^0.12.7",
+      "reflect-metadata": "^0.1.13",
+      "request": "^2.88.0",
+      "request-promise": "^4.2.2",
+      "sequelize": "^4.42.0",
+      "sequelize-typescript": "^0.6.7",
+      "source-map-support": "^0.5.10",
+      "ts-jest": "^24.0.2",
+      "tsutils": "^3.2.0",
+      "typegoose": "^5.9.0",
+      "typesafe-joi": "2.0.6",
+      "typescript": "3.5.3",
+      "util": "^0.11.1",
+      "uuid": "^3.3.2",
+      "validator": "^10.8.0",
+    },
+    "devDependencies": {
+      "@types/cors": "^2.8.4",
+      "@types/express": "^4.16.0",
+      "@types/js-sha512": "^0.7.0",
+      "@types/jsonwebtoken": "^8.3.0",
+      "@types/mongodb": "^3.1.12",
+      "@types/mongoose": "^5.2.20",
+      "@types/node": "^10.12.0",
+      "@types/request-promise": "^4.1.42",
+      "@types/sequelize": "^4.27.33",
+      "@types/uuid": "^3.4.4",
+      "@types/validator": "^9.4.2",
+      "@typescript-eslint/eslint-plugin": "^1.9.0",
+      "@typescript-eslint/parser": "^1.9.0",
+      "eslint": "^5.16.0",
+      "eslint-config-prettier": "^4.3.0",
+      "eslint-config-react-app": "^4.0.1",
+      "eslint-plugin-prettier": "^3.1.0",
+      "prettier": "^1.18.2",
+      "tslint": "^5.12.0",
+      "tslint-config-airbnb": "^5.11.1",
+      "tslint-config-prettier": "^1.17.0",
+      "tslint-eslint-rules": "^5.4.0",
+      "tslint-sonarts": "^1.8.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
