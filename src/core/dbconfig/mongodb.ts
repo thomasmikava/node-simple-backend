@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-const ClassroomsMongoDB: mongoose.Connection = mongoose.createConnection(
+const DatabaseMongoDB: mongoose.Connection = mongoose.createConnection(
 	process.env.MONGODB_CONNECTION_URL || "mongodb://localhost/satesto",
 	{
 		...({ ignoreUndefined: true } as any),
@@ -11,4 +11,4 @@ const ClassroomsMongoDB: mongoose.Connection = mongoose.createConnection(
 		useCreateIndex: true,
 	}
 );
-export default ClassroomsMongoDB;
+export default DatabaseMongoDB;

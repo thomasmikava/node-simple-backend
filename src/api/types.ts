@@ -1,7 +1,7 @@
 const TYPES = {
 	MODELS: {
-		Subjects: Symbol("Subjects"),
+		City: Symbol("CityModel"),
+		School: Symbol("SchoolModel"),
 	},
-	SERVICES: {},
 };
 export default TYPES;

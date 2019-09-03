@@ -9,11 +9,19 @@ import { MError } from "../core/utils/errors";
 
 import cors = require("cors");
 import SatestoModules from "./satesto";
+import CityModules from "./cities";
+import SchoolModules from "./schools";
 
 require("dotenv").config();
 
 export default function(port: number | string) {
-	container.load(ModelsModules, ServicesModules, SatestoModules);
+	container.load(
+		ModelsModules,
+		ServicesModules,
+		SatestoModules,
+		CityModules,
+		SchoolModules
+	);
 
 	const server = new InversifyExpressServer(container);
 

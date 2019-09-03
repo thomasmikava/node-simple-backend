@@ -14,27 +14,32 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typegoose_1 = require("typegoose");
 const mongodb_1 = __importDefault(require("../../dbconfig/mongodb"));
-class City extends typegoose_1.Typegoose {
+const bson_1 = require("bson");
+class School extends typegoose_1.Typegoose {
 }
 __decorate([
     typegoose_1.prop(),
     __metadata("design:type", String)
-], City.prototype, "name", void 0);
+], School.prototype, "name", void 0);
+__decorate([
+    typegoose_1.prop(),
+    __metadata("design:type", bson_1.ObjectId)
+], School.prototype, "cityId", void 0);
 __decorate([
     typegoose_1.prop(),
     __metadata("design:type", Date)
-], City.prototype, "createdAt", void 0);
+], School.prototype, "createdAt", void 0);
 __decorate([
     typegoose_1.prop(),
     __metadata("design:type", Date)
-], City.prototype, "updatedAt", void 0);
-const CityModel = new City().getModelForClass(City, {
+], School.prototype, "updatedAt", void 0);
+const SchoolModel = new School().getModelForClass(School, {
     existingConnection: mongodb_1.default,
     schemaOptions: {
-        collection: "cities",
+        collection: "schools",
         timestamps: true,
         minimize: false,
     },
 });
-exports.default = CityModel;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2l0eS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3NyYy9jb3JlL21vZGVscy90eXBlZ29vc2UvY2l0eS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQUFBLHlDQUEwRDtBQUMxRCxxRUFBcUQ7QUFFckQsTUFBTSxJQUFLLFNBQVEscUJBQVM7Q0FTM0I7QUFQQTtJQURDLGdCQUFJLEVBQUU7O2tDQUNNO0FBR2I7SUFEQyxnQkFBSSxFQUFFOzhCQUNJLElBQUk7dUNBQUM7QUFHaEI7SUFEQyxnQkFBSSxFQUFFOzhCQUNJLElBQUk7dUNBQUM7QUFHakIsTUFBTSxTQUFTLEdBQUcsSUFBSSxJQUFJLEVBQUUsQ0FBQyxnQkFBZ0IsQ0FBQyxJQUFJLEVBQUU7SUFDbkQsa0JBQWtCLEVBQUUsaUJBQWU7SUFDbkMsYUFBYSxFQUFFO1FBQ2QsVUFBVSxFQUFFLFFBQVE7UUFDcEIsVUFBVSxFQUFFLElBQUk7UUFDaEIsUUFBUSxFQUFFLEtBQUs7S0FDZjtDQUNELENBQUMsQ0FBQztBQUtILGtCQUFlLFNBQVMsQ0FBQyJ9
+exports.default = SchoolModel;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2Nob29sLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vc3JjL2NvcmUvbW9kZWxzL3R5cGVnb29zZS9zY2hvb2wudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFBQSx5Q0FBMEQ7QUFDMUQscUVBQXFEO0FBQ3JELCtCQUFnQztBQUVoQyxNQUFNLE1BQU8sU0FBUSxxQkFBUztDQVk3QjtBQVZBO0lBREMsZ0JBQUksRUFBRTs7b0NBQ007QUFHYjtJQURDLGdCQUFJLEVBQUU7OEJBQ0MsZUFBUTtzQ0FBQztBQUdqQjtJQURDLGdCQUFJLEVBQUU7OEJBQ0ksSUFBSTt5Q0FBQztBQUdoQjtJQURDLGdCQUFJLEVBQUU7OEJBQ0ksSUFBSTt5Q0FBQztBQUdqQixNQUFNLFdBQVcsR0FBRyxJQUFJLE1BQU0sRUFBRSxDQUFDLGdCQUFnQixDQUFDLE1BQU0sRUFBRTtJQUN6RCxrQkFBa0IsRUFBRSxpQkFBZTtJQUNuQyxhQUFhLEVBQUU7UUFDZCxVQUFVLEVBQUUsU0FBUztRQUNyQixVQUFVLEVBQUUsSUFBSTtRQUNoQixRQUFRLEVBQUUsS0FBSztLQUNmO0NBQ0QsQ0FBQyxDQUFDO0FBS0gsa0JBQWUsV0FBVyxDQUFDIn0=

@@ -1,12 +1,9 @@
 import { InstanceType, Typegoose, prop } from "typegoose";
-import ClassroomsMongoDB from "../../dbconfig/mongodb";
+import DatabaseMongoDB from "../../dbconfig/mongodb";
 
-export class City extends Typegoose {
+class City extends Typegoose {
 	@prop()
 	name: string;
-
-	@prop()
-	oldId?: number;
 
 	@prop()
 	createdAt: Date;
@@ -16,7 +13,7 @@ export class City extends Typegoose {
 }
 
 const CityModel = new City().getModelForClass(City, {
-	existingConnection: ClassroomsMongoDB,
+	existingConnection: DatabaseMongoDB,
 	schemaOptions: {
 		collection: "cities",
 		timestamps: true,
@@ -24,7 +21,7 @@ const CityModel = new City().getModelForClass(City, {
 	},
 });
 
-export type ICityInstance = InstanceType<City>;
 export type ICityModel = typeof CityModel;
+export type ICityInstance = InstanceType<City>;
 
 export default CityModel;
